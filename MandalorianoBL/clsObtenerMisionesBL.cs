@@ -6,7 +6,7 @@ namespace MandalorianoBL
     public class clsObtenerMisionesBL
     {
         /// <summary>
-        /// Función que obtiene todas las misiones y las devuelve como lista
+        /// Función que obtiene todas las misiones y si la hora está entre las 8 am y las 23:59 las devuelve como lista
         /// </summary>
         /// <returns>Devuelve todas las misiones como una lista</returns>
         public static List<clsMisionENT> obtenerMisionesBL()

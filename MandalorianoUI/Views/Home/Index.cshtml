@@ -3,7 +3,7 @@
 
 @if (Model.misiones == null)
 {
-    <div class="alert alert-warning">Es tarde, vuelve a las 8 am</div>
+    <div class="alert alert-warning">Es tarde, debes descansar, vuelve a las 8 am</div>
 }
 else
 {
@@ -23,7 +23,7 @@ else
         </form>
 
         <!-- Sólo muestra la misión si hay una seleccionada -->
-        @if (Model.nombre != "")
+        @if (Model.nombre != null)
         {
             <div class="container my-4">
                 <div class="card text-center">
@@ -34,7 +34,6 @@ else
                     </div>
                 </div>
             </div>
-
         }
     </div>
 

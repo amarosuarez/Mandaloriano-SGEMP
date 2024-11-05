@@ -3,13 +3,13 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.11.35312.102
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MandalorianoUI", "MandalorianoUI\MandalorianoUI.csproj", "{4D058A02-94DA-487E-9ADC-D857E83D8F5A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MandalorianoUI", "MandalorianoUI\MandalorianoUI.csproj", "{4D058A02-94DA-487E-9ADC-D857E83D8F5A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MandalorianoDAL", "MandalorianoDAL\MandalorianoDAL.csproj", "{AB5B1B0A-CDDF-4412-92C3-75F68EB479EE}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MandalorianoDAL", "MandalorianoDAL\MandalorianoDAL.csproj", "{AB5B1B0A-CDDF-4412-92C3-75F68EB479EE}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MandalorianoBL", "MandalorianoBL\MandalorianoBL.csproj", "{D45C8C2B-DD70-4A58-B154-0944D430E514}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MandalorianoBL", "MandalorianoBL\MandalorianoBL.csproj", "{D45C8C2B-DD70-4A58-B154-0944D430E514}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MandalorianoENT", "MandalorianoENT\MandalorianoENT.csproj", "{51AD2341-A090-432C-83E3-FC17B264A0D9}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MandalorianoENT", "MandalorianoENT\MandalorianoENT.csproj", "{51AD2341-A090-432C-83E3-FC17B264A0D9}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

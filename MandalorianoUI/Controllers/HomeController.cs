@@ -24,10 +24,10 @@ namespace MandalorianoUI.Controllers
         [HttpPost]
         public IActionResult Index(clsVistaMisionesVM vistaModel)
         {
-            // Obtener la misión basada en el id seleccionado
+            // Obtenemos la misión seleccionada
             var misionSeleccionada = clsObtenerMisionesBL.obtenerMisionByIDBL(vistaModel.id);
 
-            // Actualizar el ViewModel con la misión seleccionada
+            // Actualizamos el model con los datos de la misión
             vistaModel.nombre = misionSeleccionada.nombre;
             vistaModel.descripcion = misionSeleccionada.descripcion;
             vistaModel.recompensa = misionSeleccionada.recompensa;

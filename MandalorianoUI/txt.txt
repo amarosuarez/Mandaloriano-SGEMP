@@ -1,0 +1,34 @@
+--------------------------------
+ENTIDADES
+
+clsMisionENT:
+    - id: int
+    - nombre: string
+    - descripción: string
+    - recompensa: int
+    
+--------------------------------
+DAL
+
+clsObtenerMisionesDAL:
+    - public static List<clsMisionENT> obtenerMisionesDAL()
+    - public static clsMisionENT obtenerMisionDAL(id: int)
+--------------------------------
+BL
+Verifica el horario. Si es más tarde de media noche, no muestra las misiones
+sino que muestra un mensaje que dice que lo vuelva a intentar a las 8 am.
+
+clsObtenerMisionesBL:
+    - public static List<clsMisionENT> obtenerMisionesBL()
+        SI ES MÁS TARDE DE LAS 00:00, DEVUELVE NULL. NO PUEDE DEVOLVER UNA LISTA VACÍA PORQUE ENTRARÍA EN CONFLICTO CUANDO NO HAY MISIONES    
+    - public static clsMisionENT obtenerMisionBL(id: int)
+--------------------------------
+UI
+
+    VM
+        - clsVistaMisionesVM : clsMisionENT
+            List<clsMisionENT> misiones (get)
+            
+            clsVistaMisionVM() {
+                misiones = clsObtenerMisionesBL.obtenerMisionesBL()
+            }

@@ -1,0 +1,42 @@
+﻿@using MandalorianoUI.Models.VM
+@model clsVistaMisionesVM
+
+@if (Model.misiones == null)
+{
+    <div class="alert alert-warning">Es tarde, vuelve a las 8 am</div>
+}
+else
+{
+    <div class="text-center">
+        <h1>Misiones</h1>
+
+        <form method="post">
+            <div>
+                @Html.LabelFor(m => m.id, "Selecciona una Misión:")
+                @Html.DropDownListFor(m => m.id,
+                         new SelectList(Model.misiones, "id", "nombre"),
+                         "Seleccione una misión",
+                         new { @class = "form-control" })
+
+                <input type="submit" class="btn btn-primary mt-2" value="Ver">
+            </div>
+        </form>
+
+        <!-- Sólo muestra la misión si hay una seleccionada -->
+        @if (Model.nombre != "")
+        {
+            <div class="container my-4">
+                <div class="card text-center">
+                    <div class="card-body">
+                        <h1 class="card-title">@Model.nombre</h1>
+                        <p class="card-text">@Model.descripcion</p>
+                        <h5 class="card-subtitle mb-2 text-muted">Recompensa: <strong>@Model.recompensa</strong> créditos</h5>
+                    </div>
+                </div>
+            </div>
+
+        }
+    </div>
+
+}
+

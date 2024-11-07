@@ -26,19 +26,20 @@ namespace MandalorianoDAL
         /// </summary>
         /// <param name="id">Parámetro por el que busca la misión</param>
         /// <returns>Devuelve una misión concreta por su id</returns>
-        public static clsMisionENT obtenerMisionByIDDAL(int id)
+        public static clsMisionENT? obtenerMisionByIDDAL(int id)
         {
-            List<clsMisionENT> misiones = obtenerMisionesDAL();
+            clsMisionENT? mision = new clsMisionENT();
 
-            clsMisionENT mision = new clsMisionENT();
-
-            for (int i = 0; i < misiones.Count; i++)
+            /*for (int i = 0; i < misiones.Count; i++)
             {
                 if (misiones[i].id == id)
                 {
                     mision = misiones[i];
                 }
-            }
+            }*/
+            
+            // Equivalente a esto
+            mision = misiones.Find(mision => mision.id == id);
 
             return mision;
         }

@@ -17,7 +17,7 @@ namespace MandalorianoBL
                 return clsObtenerMisionesDAL.obtenerMisionesDAL();
             }
 
-            throw new HourException("Es tarde, debes descansar, vuelve a las 8 am."); ;
+            throw new HourException("Es tarde, debes descansar, vuelve a las 8 am.");
         }
 
         /// <summary>

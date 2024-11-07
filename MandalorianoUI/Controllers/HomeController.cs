@@ -1,4 +1,5 @@
 using MandalorianoBL;
+using MandalorianoENT;
 using MandalorianoUI.Models;
 using MandalorianoUI.Models.VM;
 using Microsoft.AspNetCore.Mvc;
@@ -20,7 +21,7 @@ namespace MandalorianoUI.Controllers
             IActionResult resultado;
             try
             {
-                var vistaModel = new clsVistaMisionesVM();
+                clsVistaMisionesVM vistaModel = new clsVistaMisionesVM();
                 resultado = View(vistaModel);
             } catch (HourException h)
             {
@@ -36,7 +37,7 @@ namespace MandalorianoUI.Controllers
         }
 
         [HttpPost]
-        public IActionResult Index(clsVistaMisionesVM vistaModel)
+        public IActionResult Index(int id)
         {
             IActionResult resultado;
 
@@ -46,7 +47,9 @@ namespace MandalorianoUI.Controllers
                 //throw new Exception("Excepción de prueba");
 
                 // Obtenemos la misión seleccionada
-                var misionSeleccionada = clsObtenerMisionesBL.obtenerMisionByIDBL(vistaModel.id);
+                clsMisionENT misionSeleccionada = clsObtenerMisionesBL.obtenerMisionByIDBL(vistaModel.id);
+
+                clsVistaMisionesVM vistaModel = new clsVistaMisionesVM();
 
                 // Actualizamos el model con los datos de la misión
                 vistaModel.nombre = misionSeleccionada.nombre;

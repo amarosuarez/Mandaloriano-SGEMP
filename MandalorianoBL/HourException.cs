@@ -6,7 +6,6 @@
 
         public HourException(string message)
             : base(message) { }
-
     }
 
 }

@@ -1,5 +1,6 @@
 ﻿using MandalorianoDAL;
 using MandalorianoENT;
+using MandalorianoUI.Models;
 
 namespace MandalorianoBL
 {
@@ -16,7 +17,7 @@ namespace MandalorianoBL
                 return clsObtenerMisionesDAL.obtenerMisionesDAL();
             }
 
-            return null;
+            throw new HourException("Es tarde, debes descansar, vuelve a las 8 am."); ;
         }
 
         /// <summary>

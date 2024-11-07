@@ -22,7 +22,12 @@ namespace MandalorianoUI.Controllers
             {
                 var vistaModel = new clsVistaMisionesVM();
                 resultado = View(vistaModel);
-            } catch (Exception e)
+            } catch (HourException h)
+            {
+                ViewBag.Error = h.Message;
+                resultado = View("FueraHora");
+            }
+               catch (Exception e)
             {
                 resultado = View("Error");
             }

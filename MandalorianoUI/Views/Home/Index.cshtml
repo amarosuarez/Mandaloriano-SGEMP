@@ -1,40 +1,33 @@
 ﻿@using MandalorianoUI.Models.VM
 @model clsVistaMisionesVM
 
-@if (Model.misiones == null)
-{
-    <div class="alert alert-warning">Es tarde, debes descansar, vuelve a las 8 am</div>
-}
-else
-{
-    <div class="text-center">
-        <h1>Misiones</h1>
+<div class="text-center">
+    <h1>Misiones</h1>
 
-        <div class="container">
+    <div class="container">
 
-            <form method="post" class="mb-3">
-                <div>
-                    @Html.LabelFor(m => m.id, "Selecciona una Misión:")
-                    @Html.DropDownListFor(m => m.id,
-                             new SelectList(Model.misiones, "id", "nombre"),
-                             "Seleccione una misión",
-                             new { @class = "form-control text-center mt-4" })
+        <form method="post" class="mb-3">
+            <div>
+                @Html.LabelFor(m => m.id, "Selecciona una Misión:")
+                @Html.DropDownListFor(m => m.id,
+                         new SelectList(Model.misiones, "id", "nombre"),
+                         "Seleccione una misión",
+                         new { @class = "form-control text-center mt-4" })
 
-                    <input type="submit" class="btn btn-primary mt-2" value="Ver">
+                <input type="submit" class="btn btn-primary mt-2" value="Ver">
+            </div>
+        </form>
+
+        <!-- Solo muestra la misión si hay una seleccionada -->
+        @if (Model.nombre != null)
+        {
+            <div class="card text-center">
+                <div class="card-body">
+                    <h1 class="card-title">@Model.nombre</h1>
+                    <p class="card-text">@Model.descripcion</p>
+                    <h5 class="card-subtitle mb-2 text-muted">Recompensa: <strong>@Model.recompensa</strong> créditos</h5>
                 </div>
-            </form>
-
-            <!-- Solo muestra la misión si hay una seleccionada -->
-            @if (Model.nombre != null)
-            {
-                <div class="card text-center">
-                    <div class="card-body">
-                        <h1 class="card-title">@Model.nombre</h1>
-                        <p class="card-text">@Model.descripcion</p>
-                        <h5 class="card-subtitle mb-2 text-muted">Recompensa: <strong>@Model.recompensa</strong> créditos</h5>
-                    </div>
-                </div>
-            }
-        </div>
+            </div>
+        }
     </div>
-}
+</div>

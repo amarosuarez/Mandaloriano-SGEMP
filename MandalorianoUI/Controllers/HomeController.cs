@@ -17,23 +17,47 @@ namespace MandalorianoUI.Controllers
 
         public IActionResult Index()
         {
-            var vistaModel = new clsVistaMisionesVM();
-            return View(vistaModel);
+            IActionResult resultado;
+            try
+            {
+                var vistaModel = new clsVistaMisionesVM();
+                resultado = View(vistaModel);
+            } catch (Exception e)
+            {
+                resultado = View("Error");
+            }
+
+            return resultado;
         }
 
         [HttpPost]
         public IActionResult Index(clsVistaMisionesVM vistaModel)
         {
-            // Obtenemos la misión seleccionada
-            var misionSeleccionada = clsObtenerMisionesBL.obtenerMisionByIDBL(vistaModel.id);
+            IActionResult resultado;
 
-            // Actualizamos el model con los datos de la misión
-            vistaModel.nombre = misionSeleccionada.nombre;
-            vistaModel.descripcion = misionSeleccionada.descripcion;
-            vistaModel.recompensa = misionSeleccionada.recompensa;
+            try
+            {
+                // Lanzamos una excepción de forma manual para probar el bloque catch
+                //throw new Exception("Excepción de prueba");
 
-            return View(vistaModel);
+                // Obtenemos la misión seleccionada
+                var misionSeleccionada = clsObtenerMisionesBL.obtenerMisionByIDBL(vistaModel.id);
+
+                // Actualizamos el model con los datos de la misión
+                vistaModel.nombre = misionSeleccionada.nombre;
+                vistaModel.descripcion = misionSeleccionada.descripcion;
+                vistaModel.recompensa = misionSeleccionada.recompensa;
+
+                resultado = View(vistaModel);
+            }
+            catch (Exception ex)
+            {
+                resultado = View("Error");
+            }
+
+            return resultado;
         }
+
 
         public IActionResult Privacy()
         {

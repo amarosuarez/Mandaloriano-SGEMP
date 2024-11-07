@@ -10,22 +10,23 @@ else
     <div class="text-center">
         <h1>Misiones</h1>
 
-        <form method="post">
-            <div>
-                @Html.LabelFor(m => m.id, "Selecciona una Misión:")
-                @Html.DropDownListFor(m => m.id,
-                         new SelectList(Model.misiones, "id", "nombre"),
-                         "Seleccione una misión",
-                         new { @class = "form-control" })
+        <div class="container">
 
-                <input type="submit" class="btn btn-primary mt-2" value="Ver">
-            </div>
-        </form>
+            <form method="post" class="mb-3">
+                <div>
+                    @Html.LabelFor(m => m.id, "Selecciona una Misión:")
+                    @Html.DropDownListFor(m => m.id,
+                             new SelectList(Model.misiones, "id", "nombre"),
+                             "Seleccione una misión",
+                             new { @class = "form-control text-center mt-4" })
 
-        <!-- Sólo muestra la misión si hay una seleccionada -->
-        @if (Model.nombre != null)
-        {
-            <div class="container my-4">
+                    <input type="submit" class="btn btn-primary mt-2" value="Ver">
+                </div>
+            </form>
+
+            <!-- Solo muestra la misión si hay una seleccionada -->
+            @if (Model.nombre != null)
+            {
                 <div class="card text-center">
                     <div class="card-body">
                         <h1 class="card-title">@Model.nombre</h1>
@@ -33,9 +34,7 @@ else
                         <h5 class="card-subtitle mb-2 text-muted">Recompensa: <strong>@Model.recompensa</strong> créditos</h5>
                     </div>
                 </div>
-            </div>
-        }
+            }
+        </div>
     </div>
-
 }
-

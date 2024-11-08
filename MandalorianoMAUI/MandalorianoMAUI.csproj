@@ -63,7 +63,8 @@
 	</ItemGroup>
 
 	<ItemGroup>
-	  <Folder Include="Views\VM\" />
+	  <ProjectReference Include="..\MandalorianoBL\MandalorianoBL.csproj" />
+	  <ProjectReference Include="..\MandalorianoENT\MandalorianoENT.csproj" />
 	</ItemGroup>
 
 </Project>

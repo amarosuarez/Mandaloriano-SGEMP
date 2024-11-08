@@ -13,12 +13,15 @@
             Padding="30,0"
             Spacing="25">
 
+            <Label Text="{Binding MensajeExc}" IsVisible="{Binding VisibleError}"></Label>
+
             <Picker ItemsSource="{Binding Misiones}"
                 SelectedItem="{Binding Mision}"
                 ItemDisplayBinding="{Binding nombre}" 
+                IsVisible="{Binding VisiblePicker}"
                 Title="Selecciona una mision" />
 
-            <Frame BackgroundColor="AliceBlue">
+            <Frame BackgroundColor="AliceBlue" IsVisible="{Binding VisibleFrame}">
 
                 <VerticalStackLayout>
                     <Label Text="{Binding Mision.nombre}" FontSize="28" FontAttributes="Bold"></Label>

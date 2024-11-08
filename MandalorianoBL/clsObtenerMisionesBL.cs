@@ -12,7 +12,7 @@ namespace MandalorianoBL
         /// <returns>Devuelve todas las misiones como una lista</returns>
         public static List<clsMisionENT> obtenerMisionesBL()
         {
-            if (DateTime.Now.Hour >= 8 && DateTime.Now.Hour < 24)
+            if (DateTime.Now.Hour >= 18 && DateTime.Now.Hour < 24)
             {
                 return clsObtenerMisionesDAL.obtenerMisionesDAL();
             }

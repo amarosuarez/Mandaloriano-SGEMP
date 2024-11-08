@@ -47,14 +47,9 @@ namespace MandalorianoUI.Controllers
                 //throw new Exception("Excepción de prueba");
 
                 // Obtenemos la misión seleccionada
-                clsMisionENT misionSeleccionada = clsObtenerMisionesBL.obtenerMisionByIDBL(vistaModel.id);
+                clsMisionENT misionSeleccionada = clsObtenerMisionesBL.obtenerMisionByIDBL(id);
 
-                clsVistaMisionesVM vistaModel = new clsVistaMisionesVM();
-
-                // Actualizamos el model con los datos de la misión
-                vistaModel.nombre = misionSeleccionada.nombre;
-                vistaModel.descripcion = misionSeleccionada.descripcion;
-                vistaModel.recompensa = misionSeleccionada.recompensa;
+                clsVistaMisionesVM vistaModel = new clsVistaMisionesVM(misionSeleccionada);
 
                 resultado = View(vistaModel);
             }

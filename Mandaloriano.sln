@@ -11,6 +11,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MandalorianoBL", "Mandalori
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MandalorianoENT", "MandalorianoENT\MandalorianoENT.csproj", "{51AD2341-A090-432C-83E3-FC17B264A0D9}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MandalorianoMAUI", "MandalorianoMAUI\MandalorianoMAUI.csproj", "{B812D63B-1A8B-4646-9232-231E20643A2C}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -33,6 +35,12 @@ Global
 		{51AD2341-A090-432C-83E3-FC17B264A0D9}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{51AD2341-A090-432C-83E3-FC17B264A0D9}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{51AD2341-A090-432C-83E3-FC17B264A0D9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B812D63B-1A8B-4646-9232-231E20643A2C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B812D63B-1A8B-4646-9232-231E20643A2C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B812D63B-1A8B-4646-9232-231E20643A2C}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{B812D63B-1A8B-4646-9232-231E20643A2C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B812D63B-1A8B-4646-9232-231E20643A2C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B812D63B-1A8B-4646-9232-231E20643A2C}.Release|Any CPU.Deploy.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
